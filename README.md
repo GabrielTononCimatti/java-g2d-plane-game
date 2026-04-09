@@ -2,9 +2,9 @@
 
 Um jogo desenvolvido em Java 2D onde você controla um avião. O objetivo é soltar "presentes" para pintar os prédios de vermelho e acumular pontos, enquanto desvia das nuvens e dos próprios prédios para não perder.
 
-<video src="Demo%20Plane%20Game.mp4" controls="controls" width="100%">
-  Seu navegador não suporta a visualização desse vídeo, mas você pode baixá-lo: <a href="Demo%20Plane%20Game.mp4">Demo Plane Game.mp4</a>
-</video>
+
+https://github.com/user-attachments/assets/d4391bf7-a22a-4ba4-9f53-a01d2d1510e1
+
 
 ## Como compilar e rodar o projeto
 
