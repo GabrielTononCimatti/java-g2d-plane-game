@@ -51,3 +51,11 @@ As nuvens foram modeladas unindo equações de elipses para delimitar sua área 
 ![Demonstração da Hitbox da Nuvem](cloud-hitbox.gif)
 
 🔗 [Visualizar Gráfico Interativo - Hitbox da Nuvem (Desmos)](https://www.desmos.com/calculator/827281d669?lang=pt-BR)
+
+## Detalhes Técnicos
+
+Durante o desenvolvimento deste projeto, foram aplicadas otimizações importantes para melhorar a performance geral e estabilidade gráfica do jogo:
+
+- **Two Buffered Animation**: Foi implementada a técnica de "two buffered animation", responsável por desenhar a tela fora de vista (em segundo plano) para depois renderizá-la. Isso se fez necessário já que o Java 2D Graphics não contém isso por padrão. Assim, eliminamos o efeito visual de flickering durante a atualização da tela a cada frame.
+
+- **Sistema de Object Pooling**: Constantemente vemos **nuvens**, **prédios** e **presentes** sendo gerados e saindo da perspectiva da tela. Em vez de ficar criando-os em memória e destruindo-os de maneira contínua, optou-se por utilizar o sistema de pooling. Com isso, o jogo reaproveita e reutiliza objetos já instanciados reciclando sua aparição. Essa otimização de alocação de memória previne que o Garbage Collector do Java reduza o framerate no meio da partida.
